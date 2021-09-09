@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+    <persistence-unit name="Connection-PU">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <!--  <class>br.com.teste.entity.Funcionario</class> -->
+        
+		<properties>
+		 <property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.connection.autocommit" value="false" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+			 <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url"
+                value="jdbc:mysql://localhost:3307/odontovida" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="32916793" />
+            
+            
+            <!-- 
+            
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/odontovida" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="34242156bgu" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="false"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.c3p0.min_size" value="5" />
+            <property name="hibernate.c3p0.max_size" value="20" />
+            <property name="hibernate.c3p0.timeout" value="300" />
+            <property name="hibernate.c3p0.max_statements" value="50" />
+            <property name="hibernate.c3p0.idle_test_period" value="3000" />
+       
+            
+            -->
+            
+            
+		</properties>
+
+	</persistence-unit>
+
+</persistence>

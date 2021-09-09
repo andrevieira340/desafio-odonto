@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <title>Gerencia Aluno</title>
+    <style>
+#rodape {
+    background-color: #167A89;
+    color: #F7FBFC;
+}
+
+#bordas {
+    background-color: #F8F8FC;
+}
+</style>
+</h:head>
+<h:body>
+    <div id="bordas">
+        <b:container>
+            <b:navBar inverse="true" fixed="top">
+                <b:navbarLinks>
+                    <b:navLink value="Lista de Alunos" href="funcionario.xhtml"></b:navLink>
+                    <b:navLink value="Gerenciar Aluno" href="manageFuncionario.xhtml"></b:navLink>
+                </b:navbarLinks>
+            </b:navBar>
+            <br />
+            <hr />
+            <br />
+            <br />
+            <br />
+            <h1>
+                <h:outputText value="Gerenciar aluno" />
+            </h1>
+            <br />
+            <br />
+            <h:form>
+                <p:panel id="panel" header="Adicionar aluno">
+
+                    <h:panelGrid columns="4" cellpadding="5">
+                        <p:outputLabel value="nome" />
+                        <p:inputText id="nome" value="#{funcionarioBean.funcionario.nome}"
+                            label="nome">
+                        </p:inputText>
+                        <br />
+
+                        <p:outputLabel value="dataNascimento" />
+                        <p:inputText id="dataNascimento" value="#{funcionarioBean.funcionario.dataNascimento}"
+                            label="dataNascimento">
+                        </p:inputText>
+                        <br />
+                        <p:outputLabel value="cpf" />
+                        <p:inputText id="cpf" value="#{funcionarioBean.funcionario.CPF}"
+                            label="cpf">
+                        </p:inputText>
+                        <br />
+                         <p:outputLabel value="salario" />
+                        <p:inputText id="salario" value="#{funcionarioBean.funcionario.salario}"
+                            label="salario">
+                        </p:inputText>
+                        <br />
+                    </h:panelGrid>
+                    <p:commandButton value="Salvar" update="panel"
+                        action="#{funcionarioBean.save}" />
+                </p:panel>
+            </h:form>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </b:container>
+    </div>
+    <div id="rodape">
+        <br /> <br /> <br /> <br />
+        <center>
+            <h2>
+                <h:outputText value="Todos os direitos reservados" />
+            </h2>
+            <img src="images/escola.jpg" alt="Escola" width="275" />
+        </center>
+        <br /> <br /> <br />
+    </div>
+</h:body>
+</html>
